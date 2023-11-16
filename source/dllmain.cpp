@@ -133,7 +133,7 @@ bool HandleWindowsVersion()
 
 bool VerifyProcessName()
 {
-	std::string expected_process("MK12.exe");
+	std::string expected_process("BBQClient-WinGDK-Shipping.exe");
 	std::string process_name = GetProcessName();
 	if (process_name != expected_process)
 	{
@@ -151,7 +151,7 @@ bool OnInitializeHook()
 
 	if (!VerifyProcessName())
 	{
-		SpawnError("This dll is made to work only with MK12.exe");
+		SpawnError("This dll is made to work only with BBQClient-WinGDK-Shipping.exe");
 		return false;
 	}
 
